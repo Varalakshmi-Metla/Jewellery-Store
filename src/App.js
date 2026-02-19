@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import UserHome from './UserHome';
+import AdminLogin from './AdminLogin';
+import AdminDashboard from './AdminDashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Normal User Home Page */}
+        <Route path="/" element={<UserHome />} />
+
+        {/* Secret Admin Login Page - Idhi evariki kanipinchadhu URL kodithe thappa */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+
+        {/* Admin Dashboard Page */}
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
