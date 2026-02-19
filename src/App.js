@@ -11,7 +11,7 @@ function App() {
         {/* Normal User Home Page */}
         <Route path="/" element={<UserHome />} />
 
-        {/* Secret Admin Login Page - Idhi evariki kanipinchadhu URL kodithe thappa */}
+        {/* Secret Admin Login Page - */}
         <Route path="/admin-login" element={<AdminLogin />} />
 
         {/* Admin Dashboard Page */}
